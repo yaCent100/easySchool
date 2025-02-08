@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+ <!-- Hero Section -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1>Apprenez à votre rythme avec E-Learning</h1>
+            <p class="lead">Des cours de qualité pour primaire et secondaire, accessibles à tout moment.</p>
+            <a href="#cours" class="btn btn-light btn-lg">Voir les cours</a>
+        </div>
+    </header>
+       <!-- Nos Enseignants -->
+    <section id="enseignants" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Nos Enseignants</h2>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <img src="https://via.placeholder.com/150" class="rounded-circle mb-3" alt="Enseignant 1">
+                    <h5>Jean Dupont</h5>
+                    <p>Professeur de Mathématiques</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="https://via.placeholder.com/150" class="rounded-circle mb-3" alt="Enseignant 2">
+                    <h5>Marie Curie</h5>
+                    <p>Professeure de Physique</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="https://via.placeholder.com/150" class="rounded-circle mb-3" alt="Enseignant 3">
+                    <h5>Albert Einstein</h5>
+                    <p>Professeur de Sciences</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Nos Cours -->
+    <section id="cours" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Nos Cours</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Cours de Mathématiques</h5>
+                            <p class="card-text">Apprenez les bases des mathématiques avec nos enseignants qualifiés.</p>
+                            <a href="#" class="btn btn-primary">Voir le cours</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Cours de Physique</h5>
+                            <p class="card-text">Découvrez les principes fondamentaux de la physique.</p>
+                            <a href="#" class="btn btn-primary">Voir le cours</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
