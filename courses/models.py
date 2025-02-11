@@ -3,7 +3,7 @@
 
 from django.db import models
 from django.utils.timezone import now
-from users.models import User  # Import de l'utilisateur s'il est l'instructeur
+from django.contrib.auth import get_user_model
 
 class Instructor(models.Model):
     lastname=models.CharField(max_length=255)
@@ -12,6 +12,7 @@ class Instructor(models.Model):
 class Category(models.Model):
     name=models.CharField(max_length=255)
     category=models.CharField(max_length=255)
+
 
 class Course(models.Model):
     title = models.CharField(max_length=255, unique=True)  # Nom du cours
@@ -33,4 +34,10 @@ class Course(models.Model):
     def __str__(self):
         return self.title
 
+class Evaluation(models.Model):
+    course = models.ForeignKey("Evaluation", on_delete=models.SET_NULL, null=True, related_name="courses")
+    content = models.TextField()
+    note = models.IntegerField()
 
+    def __str__(self):
+        return f"{self.content} - {self.note}"

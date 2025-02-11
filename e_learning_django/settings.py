@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     # Applications du projet
     'users',
     'courses',
-    'quiz',
     'payments',
     'forum',
     'dashboard',
