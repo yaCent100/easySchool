@@ -29,15 +29,18 @@ class Course(models.Model):
     created_at = models.DateTimeField(default=now)  # Date de création
     updated_at = models.DateTimeField(auto_now=True)  # Date de mise à jour
     is_published = models.BooleanField(default=False)  # Cours publié ou non
-    video_url = models.URLField(null=True, blank=True)  # Lien YouTube
+    youtube_playlist_id = models.CharField(max_length=255, null=True, blank=True)  # ID de la playlist YouTube
 
     def __str__(self):
         return self.title
 
+
+
 class Evaluation(models.Model):
-    course = models.ForeignKey("Evaluation", on_delete=models.SET_NULL, null=True, related_name="courses")
+    course = models.ForeignKey("Course", on_delete=models.SET_NULL, null=True, related_name="evaluations")  # Correction ici
     content = models.TextField()
     note = models.IntegerField()
 
     def __str__(self):
         return f"{self.content} - {self.note}"
+

@@ -28,6 +28,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# clé api youtube
+YOUTUBE_API_KEY = "AIzaSyCB7Nkb1Kvw4nHCrSXKBCGpTAeJS5Y9Is8"
+
+
 
 # Application definition
 
@@ -44,6 +48,7 @@ INSTALLED_APPS = [
     'courses',
     'payments',
     'forum',
+    'login',
     'dashboard',
 ]
 
